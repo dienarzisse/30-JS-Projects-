@@ -143,5 +143,3 @@ document.addEventListener('keydown', (event) => {
         setTimeout(function() {
           }, dur);
   });
-
-  console.log("something interesting")
