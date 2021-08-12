@@ -102,4 +102,45 @@ document.addEventListener('keydown', (event) => {
 
   }, false);
 
-  
+  document.getElementById("A").addEventListener("click", function() {
+    PlaySound("a");
+        setTimeout(function() {
+          }, dur);
+  });
+
+  document.getElementById("S").addEventListener("click", function() {
+    PlaySound("b");
+        setTimeout(function() {
+          }, dur);
+  });
+
+  document.getElementById("D").addEventListener("click", function() {
+    PlaySound("c");
+        setTimeout(function() {
+          }, dur);
+  });
+
+  document.getElementById("F").addEventListener("click", function() {
+    PlaySound("d");
+        setTimeout(function() {
+          }, dur);
+  });
+
+  document.getElementById("J").addEventListener("click", function() {
+    PlaySound("e");
+        setTimeout(function() {
+          }, dur);
+  });
+
+  document.getElementById("K").addEventListener("click", function() {
+    PlaySound("f");
+        setTimeout(function() {
+          }, dur);
+  });
+
+  document.getElementById("L").addEventListener("click", function() {
+    PlaySound("g");
+        setTimeout(function() {
+          }, dur);
+  });
+
