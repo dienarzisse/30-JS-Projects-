@@ -9,6 +9,7 @@ function PlaySound(melody) {
        
     };
     snd.volume = 0.3;
+    snd.currentTime = 0;
     snd.play();
 
 
