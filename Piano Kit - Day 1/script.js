@@ -25,9 +25,8 @@ function PlaySound(melody) {
 
 
 
-// Add event listener on keydown
-document.addEventListener('keydown', (event) => {
-    var name = event.key;
+// Add event listener on keydown  
+window.addEventListener('keydown', (event) => {
     var code = event.code;
 
 

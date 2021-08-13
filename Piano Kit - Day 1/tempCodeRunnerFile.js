@@ -1,1 +1,0 @@
-PlaySound("quick_sound");
