@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
+@font-face {
+    font-family: 'Clock Font'; /*a name to be used later*/
+    src: url('Font/digital-7.ttf'); /*URL to font*/
+}
 :root{
     --clock-background:rgb(132,197,191);
     --clock-screen-background:rgb(19,33,60);
@@ -7,7 +10,7 @@
     --clock-legs-color:rgb(51,51,51);
     --colck-text-color:rgb(217,237,146);
     --clock-scale:1.75;
-    --clock-font:'ZCOOL QingKe HuangYou';
+    --clock-font:'Clock Font'; /*'ZCOOL QingKe HuangYou';*/
 }
 
 *{
