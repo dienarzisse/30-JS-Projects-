@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
+:root{
+    --clock-background:rgb(132,197,191);
+    --clock-screen-background:rgb(19,33,60);
+    --clock-upper-part-background:rgb(252,163,17);
+    --clock-background-color:rgb(229,229,229);
+    --clock-legs-color:rgb(51,51,51);
+    --colck-text-color:rgb(217,237,146);
+    --clock-scale:1.75;
+    --clock-font:'ZCOOL QingKe HuangYou';
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    min-height: 100vh;
+    z-index:-1;
+}
+
+.container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    background-color:var(--clock-background);
+    height: calc(21vw * var(--clock-scale));
+    width: calc(21vw * var(--clock-scale));
+    border-radius: 50%;
+    z-index:1;
+    overflow:hidden;
+
+    /* Makes the clock unselectable */
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+}
+
+.clock{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    z-index:2;
+} 
+
+.shadow1{
+    position: absolute;
+    height: calc(11vw * var(--clock-scale) * 0.75);
+    width: calc(13vw * var(--clock-scale) * 0.75);
+    background-color: #699e98;
+    top: calc(8.5vw * var(--clock-scale));
+    left:calc(9.8vw * var(--clock-scale));
+    transform: skew(45deg);
+    z-index: -1;
+
+  }
+  
+
+ .shadow2{
+    position: absolute;
+    height: calc(11vw * var(--clock-scale) * 0.75);
+    width: calc(13.5vw * var(--clock-scale) * 0.75);
+    background-color: #699e98;
+    top: calc(13vw * var(--clock-scale));
+    left:calc(10vw * var(--clock-scale));
+    transform: skew(45deg);
+    z-index: -1;
+
+  } 
+
+
+.clock-body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    background-color:var(--clock-background-color);
+    border-radius: calc(0.5rem * var(--clock-scale));
+    height: calc(5vw * var(--clock-scale));
+    width: calc(11vw * var(--clock-scale));
+    z-index:4;
+} 
+
+.upper-part{
+    background-color:var(--clock-upper-part-background);
+    height: calc(1vw * var(--clock-scale));
+    width: calc(8vw * var(--clock-scale));
+    border-top-left-radius: 2vh;
+    border-top-right-radius: 2vh;
+    transform:translate(0, 50%);
+    z-index:3;
+}
+
+.bottom-part {
+    display:flex;
+    align-items:center;
+    justify-content:  space-between;
+    height: calc(1vw * var(--clock-scale));
+    width: calc(8vw * var(--clock-scale));
+    transform:translate(0, -50%);
+    z-index: 3;
+
+}
+.bottom-part .legs{
+    background-color:var(--clock-legs-color);
+    height: calc(1vw * var(--clock-scale));
+    width: calc(1vw * var(--clock-scale));
+    border-radius: 50%;
+}
+
+
+.clock-screen {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    border-radius: calc(0.25rem * var(--clock-scale));
+    color:rgb(217,237,146);
+    background-color:var(--clock-screen-background);
+    height: calc(4vw * var(--clock-scale));
+    width: calc(10vw * var(--clock-scale));
+    /* font-size: calc(2.5vw * var(--clock-scale)); */
+    font-family: var(--clock-font);
+    letter-spacing: 1vw;
+    z-index:5;
+    border:2px solid black;
+    overflow: hidden;
+
+}
+
+.clock-screen .time{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    color:rgb(217,237,146);
+    background-color:var(--clock-screen-background);
+    height: calc(4vw * var(--clock-scale));
+    width: calc(10vw * var(--clock-scale));
+    font-size: calc(2.5vw * var(--clock-scale));
+    font-family: var(--clock-font);
+    letter-spacing: 1vw;
+    transform:translate(0.5vw);
+    z-index:5;
+
+}
+
+.clock-screen .date{
+    display:flex;
+    align-items:center;
+    justify-content:  space-between;
+    font-size: calc(0.75vw * var(--clock-scale));
+    letter-spacing: 0.25vw;
+    height: calc(1vw * var(--clock-scale));
+    width: calc(10vw * var(--clock-scale));
+    padding:0.75vw;
+    z-index:5;
+
+}
+
+.separator{
+    transition: 1s ease-in-out;
+}
+
+@media screen and (max-width: 450px) {
+
+     :root {
+        --clock-scale:3;
+    }
+  }
