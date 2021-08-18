@@ -28,6 +28,7 @@ body{
     justify-content:space-between;
     align-items:center;
     min-height: 100vh;
+    background-color: rgba(68,190,199, 0.4);
     z-index:-1;
 }
 
@@ -42,6 +43,7 @@ body{
     border-radius: 50%;
     position:relative;
     z-index:1;
+    right: 10vw;
     filter: blur(var(--clock-blur));
     overflow:hidden;
     

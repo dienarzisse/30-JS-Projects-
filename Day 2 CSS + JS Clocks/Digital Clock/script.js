@@ -17,7 +17,7 @@ function setTime(){
     month = date.getMonth(), year = date.getFullYear(), curDay = date.getDate();
     currentSeconds.innerHTML = sec < 10 ? '0' + sec : sec;
     currentMinutes.innerHTML = min  < 10 ? '0' + min : min;
-    currentHours.innerHTML = hours;
+    currentHours.innerHTML = hours  ;
     currentDay.innerHTML = dayWeek(day);
     currentDateFormat.innerHTML = `${curDay}\\ ${month + 1} \\ ${year.toString().substr(-2)}`;
 
